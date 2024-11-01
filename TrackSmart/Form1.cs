@@ -7,18 +7,87 @@ namespace TrackSmart
     public partial class Form1 : Form
     {
         List<Expense> expenseList = new List<Expense>();
-        private int editingIndex = -1;  
+        private int editingIndex = -1;
+        private DatabaseHelper dbHelper;
 
         public Form1()
         {
             InitializeComponent();
 
-            // Setup the ListView columns
-            SetupListView();
+            dbHelper = new DatabaseHelper();
+            dbHelper.InitializeDatabase();
 
-            // Display any pre-existing expenses (if needed)
+            SetupListView();
             DisplayExpenses();
+
+            // Attach the ColumnClick event to the ListView
+            listViewExpenses.ColumnClick += new ColumnClickEventHandler(listViewExpenses_ColumnClick);
         }
+
+        private int sortColumn = -1;
+
+        private void listViewExpenses_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            // Determine if the clicked column is the same as the previously clicked column.
+            if (e.Column != sortColumn)
+            {
+                // Set the new sort column.
+                sortColumn = e.Column;
+                // Set the sort order to ascending by default.
+                listViewExpenses.Sorting = SortOrder.Ascending;
+            }
+            else
+            {
+                // Toggle the sort order.
+                listViewExpenses.Sorting = listViewExpenses.Sorting == SortOrder.Ascending ? SortOrder.Descending : SortOrder.Ascending;
+            }
+
+            // Set the ListViewItemSorter property to a new ListViewItemComparer object.
+            listViewExpenses.ListViewItemSorter = new ListViewItemComparer(e.Column, listViewExpenses.Sorting);
+
+            // Call the sort method to manually sort.
+            listViewExpenses.Sort();
+        }
+
+        public class ListViewItemComparer : System.Collections.IComparer
+        {
+            private int col;
+            private SortOrder order;
+
+            public ListViewItemComparer(int column, SortOrder sortOrder)
+            {
+                col = column;
+                order = sortOrder;
+            }
+
+            public int Compare(object x, object y)
+            {
+                int returnVal = 0;
+
+                // Parse date or numeric values when necessary
+                if (col == 0) // Assuming the first column is the Id (numeric)
+                {
+                    returnVal = int.Parse(((ListViewItem)x).SubItems[col].Text).CompareTo(
+                                int.Parse(((ListViewItem)y).SubItems[col].Text));
+                }
+                else if (col == 1) // Assuming the Date column (date sorting)
+                {
+                    returnVal = DateTime.Parse(((ListViewItem)x).SubItems[col].Text).CompareTo(
+                                DateTime.Parse(((ListViewItem)y).SubItems[col].Text));
+                }
+                else // Default to string comparison
+                {
+                    returnVal = String.Compare(((ListViewItem)x).SubItems[col].Text,
+                                               ((ListViewItem)y).SubItems[col].Text);
+                }
+
+                // Return ascending or descending based on order
+                if (order == SortOrder.Descending) returnVal = -returnVal;
+
+                return returnVal;
+            }
+        }
+
 
         // Add a new expense when the "Finish" button is clicked
         private void finishButton_Click(object sender, EventArgs e)
@@ -30,27 +99,24 @@ namespace TrackSmart
             string selectedCategory = category.SelectedItem?.ToString();
             decimal amountSpent = decimal.Parse(amount.Text);
 
-            Expense expense = new Expense(selectedDate, selectedVendor, selectedCategory, amountSpent);
-
-            // Check if we are editing an existing expense
             if (editingIndex >= 0)
             {
-                // Update the existing expense
-                expenseList[editingIndex] = expense;
+                // Update the existing expense in the database
+                dbHelper.UpdateExpense(editingIndex, selectedDate, selectedCategory, selectedVendor, amountSpent);
 
-                // Reset editingIndex
+                // Reset editingIndex after saving
                 editingIndex = -1;
-
-                // Update the ListView with the new expense
-                DisplayExpenses();
             }
             else
             {
-                // Add a new expense
-                expenseList.Add(expense);
-                DisplayNewExpense(expense);
+                // Add the expense to the database
+                dbHelper.AddExpense(selectedDate, selectedCategory, selectedVendor, amountSpent);
             }
 
+            // Refresh the ListView by retrieving all expenses from the database
+            DisplayExpenses();
+
+            // Provide user feedback
             expenseAddConfirmation();
             ClearForm();
         }
@@ -62,17 +128,22 @@ namespace TrackSmart
             MessageBox.Show("You have created a new expense");
         }
 
-        // Display expenses in the ListView
         private void DisplayExpenses()
         {
-            listViewExpenses.Items.Clear(); // Clear the ListView before adding new items
+            // Clear the ListView before adding new items
+            listViewExpenses.Items.Clear();
 
-            foreach (var expense in expenseList)
+            // Retrieve all expenses from the database
+            List<Expense> expenses = dbHelper.GetExpenses();
+
+            // Loop through each expense and add it to the ListView
+            foreach (var expense in expenses)
             {
-                // Create a new ListViewItem with the date as the main item
-                ListViewItem item = new ListViewItem(expense.Date.ToString("MM/dd/yyyy"));
+                // Create a new ListViewItem with the Id as the main item
+                ListViewItem item = new ListViewItem(expense.Id.ToString());
 
-                // Add subitems for Vendor, Category, and Amount
+                // Add subitems for Date, Vendor, Category, and Amount
+                item.SubItems.Add(expense.Date.ToString("MM/dd/yyyy"));
                 item.SubItems.Add(expense.Vendor);
                 item.SubItems.Add(expense.Category);
                 item.SubItems.Add(expense.Amount.ToString("C")); // "C" formats as currency
@@ -82,13 +153,15 @@ namespace TrackSmart
             }
         }
 
+
         // Set up the ListView with columns
         private void SetupListView()
         {
             // Clear any existing columns
             listViewExpenses.Columns.Clear();
 
-            // Add columns for Date, Vendor, Category, and Amount
+            // Add columns for Id, Date, Vendor, Category, and Amount
+            listViewExpenses.Columns.Add("Id", 50, HorizontalAlignment.Left);  // New Id column
             listViewExpenses.Columns.Add("Date", 100, HorizontalAlignment.Left);
             listViewExpenses.Columns.Add("Vendor", 150, HorizontalAlignment.Left);
             listViewExpenses.Columns.Add("Category", 100, HorizontalAlignment.Left);
@@ -120,11 +193,11 @@ namespace TrackSmart
 
                 if (result == DialogResult.Yes)
                 {
-                    // Get the index of the selected item in the ListView
-                    int selectedIndex = listViewExpenses.SelectedItems[0].Index;
+                    // Get the Id of the selected item in the ListView
+                    int selectedId = int.Parse(listViewExpenses.SelectedItems[0].SubItems[0].Text); // Assuming Id is stored as the first column
 
-                    // Remove the corresponding expense from the expenseList
-                    expenseList.RemoveAt(selectedIndex);
+                    // Delete the corresponding expense from the database
+                    dbHelper.DeleteExpense(selectedId);
 
                     // Refresh the ListView to reflect the changes
                     DisplayExpenses();
@@ -135,6 +208,7 @@ namespace TrackSmart
                 MessageBox.Show("Please select an expense to remove.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
 
         private void DisplayNewExpense(Expense expense)
         {
@@ -154,15 +228,23 @@ namespace TrackSmart
 
                 if (result == DialogResult.Yes)
                 {
-                    // Get the index of the selected item in the ListView
-                    editingIndex = listViewExpenses.SelectedItems[0].Index;  // Track the index being edited
-                    Expense selectedExpense = expenseList[editingIndex];
+                    // Get the Id of the selected item in the ListView
+                    int selectedId = int.Parse(listViewExpenses.SelectedItems[0].SubItems[0].Text); // Assuming Id is stored as the first column
 
-                    // Load selected expense data into the form for editing
-                    date.Value = selectedExpense.Date;
-                    vendor.SelectedItem = selectedExpense.Vendor;
-                    category.SelectedItem = selectedExpense.Category;
-                    amount.Text = selectedExpense.Amount.ToString();
+                    // Retrieve the expense with the specified Id from the database
+                    Expense selectedExpense = dbHelper.GetExpenseById(selectedId); // You'll need to implement this method
+
+                    if (selectedExpense != null)
+                    {
+                        // Load selected expense data into the form for editing
+                        date.Value = selectedExpense.Date;
+                        vendor.SelectedItem = selectedExpense.Vendor;
+                        category.SelectedItem = selectedExpense.Category;
+                        amount.Text = selectedExpense.Amount.ToString();
+
+                        // Track the Id for saving edits later
+                        editingIndex = selectedExpense.Id;
+                    }
                 }
             }
             else
@@ -170,6 +252,7 @@ namespace TrackSmart
                 MessageBox.Show("Please select an expense to edit.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
 
         private bool ValidateExpenseFields()
         {
