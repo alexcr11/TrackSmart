@@ -20,6 +20,7 @@ public class DatabaseHelper
         using (var connection = new SQLiteConnection($"Data Source={dbFilePath};Version=3;"))
         {
             connection.Open();
+
             string createTableQuery = @"
                 CREATE TABLE IF NOT EXISTS Expenses (
                     Id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -30,8 +31,102 @@ public class DatabaseHelper
                 )";
             SQLiteCommand command = new SQLiteCommand(createTableQuery, connection);
             command.ExecuteNonQuery();
+
+            // Create the Categories table if it doesn't exist
+            string createCategoriesTableQuery = @"
+            CREATE TABLE IF NOT EXISTS Categories (
+                Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                Name TEXT UNIQUE NOT NULL
+            )";
+            SQLiteCommand createCategoriesCommand = new SQLiteCommand(createCategoriesTableQuery, connection);
+            createCategoriesCommand.ExecuteNonQuery();
+
+            // Create the Vendors table if it doesn't exist
+            string createVendorsTableQuery = @"
+            CREATE TABLE IF NOT EXISTS Vendors (
+                Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                Name TEXT UNIQUE NOT NULL
+            )";
+            SQLiteCommand createVendorsCommand = new SQLiteCommand(createVendorsTableQuery, connection);
+            createVendorsCommand.ExecuteNonQuery();
         }
     }
+
+    public void AddVendor(string vendorName)
+    {
+        using (var connection = new SQLiteConnection($"Data Source={dbFilePath};Version=3;"))
+        {
+            connection.Open();
+            string insertQuery = "INSERT INTO Vendors (Name) VALUES (@Name)"; // Adjust table/column names if needed
+
+            using (var command = new SQLiteCommand(insertQuery, connection))
+            {
+                command.Parameters.AddWithValue("@Name", vendorName);
+                command.ExecuteNonQuery();
+            }
+        }
+    }
+
+    public List<string> GetVendors()
+    {
+        List<string> vendors = new List<string>();
+
+        using (var connection = new SQLiteConnection($"Data Source={dbFilePath};Version=3;"))
+        {
+            connection.Open();
+            string selectQuery = "SELECT Name FROM Vendors";
+
+            using (var command = new SQLiteCommand(selectQuery, connection))
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    vendors.Add(reader.GetString(0));
+                }
+            }
+        }
+
+        return vendors;
+    }
+
+    public void AddCategory(string categoryName)
+    {
+        using (var connection = new SQLiteConnection($"Data Source={dbFilePath};Version=3;"))
+        {
+            connection.Open();
+            string insertQuery = "INSERT INTO Categories (Name) VALUES (@Name)"; // Adjust table/column names if needed
+
+            using (var command = new SQLiteCommand(insertQuery, connection))
+            {
+                command.Parameters.AddWithValue("@Name", categoryName);
+                command.ExecuteNonQuery();
+            }
+        }
+    }
+
+
+    public List<string> GetCategories()
+    {
+        List<string> categories = new List<string>();
+
+        using (var connection = new SQLiteConnection($"Data Source={dbFilePath};Version=3;"))
+        {
+            connection.Open();
+            string selectQuery = "SELECT Name FROM Categories";
+
+            using (var command = new SQLiteCommand(selectQuery, connection))
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    categories.Add(reader.GetString(0));
+                }
+            }
+        }
+
+        return categories;
+    }
+
 
     public void AddExpense(DateTime date, string category, string vendor, decimal amount)
     {
@@ -52,6 +147,7 @@ public class DatabaseHelper
         }
     }
 
+    
     public List<Expense> GetExpenses()
     {
         List<Expense> expenses = new List<Expense>();

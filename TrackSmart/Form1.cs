@@ -20,8 +20,26 @@ namespace TrackSmart
             SetupListView();
             DisplayExpenses();
 
+            // Load categories and vendors into ComboBoxes
+            LoadCategories();
+            LoadVendors();
+
             // Attach the ColumnClick event to the ListView
             listViewExpenses.ColumnClick += new ColumnClickEventHandler(listViewExpenses_ColumnClick);
+        }
+
+        private void LoadCategories()
+        {
+            List<string> categories = dbHelper.GetCategories();
+            category.Items.Clear();
+            category.Items.AddRange(categories.ToArray());
+        }
+
+        private void LoadVendors()
+        {
+            List<string> vendors = dbHelper.GetVendors();
+            vendor.Items.Clear();
+            vendor.Items.AddRange(vendors.ToArray());
         }
 
         private int sortColumn = -1;
