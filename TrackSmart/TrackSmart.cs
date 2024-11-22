@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using TrackSmart.Properties;
 
 namespace TrackSmart
 {
-    public partial class Form1 : Form
+    public partial class TrackSmart : Form
     {
         List<Expense> expenseList = new List<Expense>();
         private int editingIndex = -1;
         private DatabaseHelper dbHelper;
 
-        public Form1()
+        public TrackSmart()
         {
             InitializeComponent();
 
@@ -181,8 +182,8 @@ namespace TrackSmart
             // Add columns for Id, Date, Vendor, Category, and Amount
             listViewExpenses.Columns.Add("Id", 50, HorizontalAlignment.Left);  // New Id column
             listViewExpenses.Columns.Add("Date", 100, HorizontalAlignment.Left);
-            listViewExpenses.Columns.Add("Vendor", 150, HorizontalAlignment.Left);
             listViewExpenses.Columns.Add("Category", 100, HorizontalAlignment.Left);
+            listViewExpenses.Columns.Add("Vendor", 150, HorizontalAlignment.Left);
             listViewExpenses.Columns.Add("Amount", 100, HorizontalAlignment.Right);
 
             // Ensure ListView is in Details view
@@ -227,6 +228,11 @@ namespace TrackSmart
             }
         }
 
+        public void RefreshData()
+        {
+            LoadCategories(); // Reload categories into the ComboBox
+            LoadVendors();    // Reload vendors into the ComboBox
+        }
 
         private void DisplayNewExpense(Expense expense)
         {
@@ -293,18 +299,25 @@ namespace TrackSmart
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            settingsForm settingsForm = new settingsForm();
-            settingsForm.ShowDialog();  // Use ShowDialog() for a modal window
+            Settings settingsForm = new Settings();
+            settingsForm.Owner = this; // Set MainForm as the owner
+            settingsForm.ShowDialog();  
         }
 
         private void btnYTD_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Year-To-Date report feature not yet implemented.", "Coming Soon", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //this code should send the expense list YTD data to the new form to prefill the details needed in the form
+            ExpenseViewer expenseViewer = new ExpenseViewer();
+            expenseViewer.Owner = this;
+            expenseViewer.ShowDialog();
         }
 
         private void btnMTD_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Month-To-Date report feature not yet implemented.", "Coming Soon", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //this code should send the expense list data to the new form to prefill the details needed in the form
+            ExpenseViewer expenseViewer = new ExpenseViewer();
+            expenseViewer.Owner = this;
+            expenseViewer.ShowDialog();
         }
     }
 }

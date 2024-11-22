@@ -104,6 +104,35 @@ public class DatabaseHelper
         }
     }
 
+    public void RemoveCategory(string categoryName)
+    {
+        using (var connection = new SQLiteConnection($"Data Source={dbFilePath};Version=3;"))
+        {
+            connection.Open();
+            string deleteQuery = "DELETE FROM Categories WHERE Name = @Name";
+
+            using (var command = new SQLiteCommand(deleteQuery, connection))
+            {
+                command.Parameters.AddWithValue("@Name", categoryName);
+                command.ExecuteNonQuery();
+            }
+        }
+    }
+
+    public void RemoveVendor(string vendorName)
+    {
+        using (var connection = new SQLiteConnection($"Data Source={dbFilePath};Version=3;"))
+        {
+            connection.Open();
+            string deleteQuery = "DELETE FROM Vendors WHERE Name = @Name";
+
+            using (var command = new SQLiteCommand(deleteQuery, connection))
+            {
+                command.Parameters.AddWithValue("@Name", vendorName);
+                command.ExecuteNonQuery();
+            }
+        }
+    }
 
     public List<string> GetCategories()
     {
@@ -123,7 +152,6 @@ public class DatabaseHelper
                 }
             }
         }
-
         return categories;
     }
 
@@ -147,7 +175,6 @@ public class DatabaseHelper
         }
     }
 
-    
     public List<Expense> GetExpenses()
     {
         List<Expense> expenses = new List<Expense>();
@@ -248,5 +275,4 @@ public class DatabaseHelper
             }
         }
     }
-
 }

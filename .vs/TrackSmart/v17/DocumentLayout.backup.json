@@ -3,28 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|c:\\users\\crone\\source\\repos\\alexcr11\\tracksmart\\tracksmart\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|solutionrelative:tracksmart\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|c:\\users\\crone\\source\\repos\\alexcr11\\tracksmart\\tracksmart\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|solutionrelative:tracksmart\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|c:\\users\\crone\\source\\repos\\alexcr11\\tracksmart\\tracksmart\\tracksmart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|solutionrelative:tracksmart\\tracksmart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\tracksmart\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|solutionrelative:tracksmart\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\tracksmart\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|solutionrelative:tracksmart\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|c:\\users\\crone\\source\\repos\\alexcr11\\tracksmart\\tracksmart\\expenseviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|solutionrelative:tracksmart\\expenseviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\tracksmart\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|solutionrelative:tracksmart\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|c:\\users\\crone\\source\\repos\\alexcr11\\tracksmart\\tracksmart\\expenseviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|solutionrelative:tracksmart\\expenseviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\tracksmart\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|solutionrelative:tracksmart\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|c:\\users\\crone\\source\\repos\\alexcr11\\tracksmart\\tracksmart\\expenses.db||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|solutionrelative:tracksmart\\expenses.db||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|c:\\users\\crone\\source\\repos\\alexcr11\\tracksmart\\tracksmart\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|solutionrelative:tracksmart\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|c:\\users\\crone\\source\\repos\\alexcr11\\tracksmart\\tracksmart\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|solutionrelative:tracksmart\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|c:\\users\\crone\\source\\repos\\alexcr11\\tracksmart\\tracksmart\\tracksmart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|solutionrelative:tracksmart\\tracksmart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|c:\\users\\crone\\source\\repos\\alexcr11\\tracksmart\\tracksmart\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|solutionrelative:tracksmart\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|c:\\users\\crone\\source\\repos\\alexcr11\\tracksmart\\tracksmart\\settings.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DF9FD31-3E09-40AF-83B9-322CF85E696B}|TrackSmart\\TrackSmart.csproj|solutionrelative:tracksmart\\settings.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,45 +70,109 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "settingsForm.cs",
-              "DocumentMoniker": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\settingsForm.cs",
-              "RelativeDocumentMoniker": "TrackSmart\\settingsForm.cs",
-              "ToolTip": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\settingsForm.cs",
-              "RelativeToolTip": "TrackSmart\\settingsForm.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAEwDcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T18:40:39.056Z",
+              "DocumentIndex": 5,
+              "Title": "expenses.db",
+              "DocumentMoniker": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\expenses.db",
+              "RelativeDocumentMoniker": "TrackSmart\\expenses.db",
+              "ToolTip": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\expenses.db",
+              "RelativeToolTip": "TrackSmart\\expenses.db",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGGSURBVDhPY2SAgsry0vsMDP8VoFwsgPHBn38Mgd3d3RegAkDl//9DWSADSv7/\u002BvULJwbJNzXUvi8tLTWAagEDJihNFEhITBbg5ebYj2wI0QYICAgwTJ82heH79\u002B8CLEz/90OFEQDdC3uOnPm/69ApFDEYBqmFasN0wdXbDxh2HDzJ8O79B4a3794zrN9\u002BgOHc5RtQWUyAYQALExPDt2/fGUz0NBlMDbQYvn3/xsDCgtunGDJ//v5l\u002BP37F8Pff38Z/gHZf37/Zvjz5y9UFhNgGPDz508GUOI4cPQUw74jJxgYgZxTZ88DXfIDogANYBhgpKvBEObnxsDHw8XwF2jzsxdPGR49eczQ0TeR4cbN21BVCIDTc4FeLgyezjYMHz98ZGirKWf48O4dAwcHG1QWAXCHDhB8/QoMQKCK3KJSBlZWZpSUCwN4DVBXVWaoKMpnsLG0YOjtaGNQVMDMKngNAAFuLi6G8NBgKA8TEDSAEEDKzsXA7MyIJzsjg/8P2jt7FRkYGBgAmdPDqvBXzR4AAAAASUVORK5CYII=",
+              "WhenOpened": "2024-11-22T00:23:30.802Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\Program.cs",
+              "RelativeDocumentMoniker": "TrackSmart\\Program.cs",
+              "ToolTip": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\Program.cs",
+              "RelativeToolTip": "TrackSmart\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T00:22:33.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ExpenseViewer.cs",
+              "DocumentMoniker": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\ExpenseViewer.cs",
+              "RelativeDocumentMoniker": "TrackSmart\\ExpenseViewer.cs",
+              "ToolTip": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\ExpenseViewer.cs",
+              "RelativeToolTip": "TrackSmart\\ExpenseViewer.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAIAwwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T23:51:47.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ExpenseViewer.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\ExpenseViewer.cs",
+              "RelativeDocumentMoniker": "TrackSmart\\ExpenseViewer.cs",
+              "ToolTip": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\ExpenseViewer.cs [Design]",
+              "RelativeToolTip": "TrackSmart\\ExpenseViewer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T23:51:33.026Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "settingsForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\settingsForm.cs",
-              "RelativeDocumentMoniker": "TrackSmart\\settingsForm.cs",
-              "ToolTip": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\settingsForm.cs [Design]",
-              "RelativeToolTip": "TrackSmart\\settingsForm.cs [Design]",
+              "Title": "TrackSmart.cs",
+              "DocumentMoniker": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\TrackSmart.cs",
+              "RelativeDocumentMoniker": "TrackSmart\\TrackSmart.cs",
+              "ToolTip": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\TrackSmart.cs",
+              "RelativeToolTip": "TrackSmart\\TrackSmart.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAYwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T18:41:30.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Settings.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\Settings.Designer.cs",
+              "RelativeDocumentMoniker": "TrackSmart\\Settings.Designer.cs",
+              "ToolTip": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\Settings.Designer.cs",
+              "RelativeToolTip": "TrackSmart\\Settings.Designer.cs",
+              "ViewState": "AgIAAM0AAAAAAAAAAAAIwOsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T01:55:32.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Settings.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\Settings.cs",
+              "RelativeDocumentMoniker": "TrackSmart\\Settings.cs",
+              "ToolTip": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\Settings.cs [Design]",
+              "RelativeToolTip": "TrackSmart\\Settings.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T00:59:31.77Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "DatabaseHelper.cs",
               "DocumentMoniker": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\DatabaseHelper.cs",
               "RelativeDocumentMoniker": "TrackSmart\\DatabaseHelper.cs",
               "ToolTip": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\DatabaseHelper.cs",
               "RelativeToolTip": "TrackSmart\\DatabaseHelper.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAgwEMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAPIAAAAAAAAAAAAmwAIBAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T00:50:00.38Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Expense.cs",
               "DocumentMoniker": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\Expense.cs",
               "RelativeDocumentMoniker": "TrackSmart\\Expense.cs",
@@ -101,27 +185,48 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\Form1.cs",
-              "RelativeDocumentMoniker": "TrackSmart\\Form1.cs",
-              "ToolTip": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\Form1.cs [Design]",
-              "RelativeToolTip": "TrackSmart\\Form1.cs [Design]",
+              "DocumentIndex": 8,
+              "Title": "TrackSmart.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\TrackSmart.cs",
+              "RelativeDocumentMoniker": "TrackSmart\\TrackSmart.cs",
+              "ToolTip": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\TrackSmart.cs [Design]",
+              "RelativeToolTip": "TrackSmart\\TrackSmart.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-15T01:38:20.532Z",
               "EditorCaption": " [Design]"
-            },
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "beb7d459-99f4-429e-9ba6-60e8da9a3197",
+        "Display": 0,
+        "X": 129,
+        "Y": 216,
+        "Width": 1043,
+        "Height": 743,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\Form1.cs",
-              "RelativeDocumentMoniker": "TrackSmart\\Form1.cs",
-              "ToolTip": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\Form1.cs",
-              "RelativeToolTip": "TrackSmart\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAjAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "Settings.cs",
+              "DocumentMoniker": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\Settings.cs",
+              "RelativeDocumentMoniker": "TrackSmart\\Settings.cs",
+              "ToolTip": "C:\\Users\\crone\\source\\repos\\alexcr11\\TrackSmart\\TrackSmart\\Settings.cs",
+              "RelativeToolTip": "TrackSmart\\Settings.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAYwCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T18:41:30.627Z",
+              "WhenOpened": "2024-11-18T22:26:48.104Z",
               "EditorCaption": ""
             }
           ]

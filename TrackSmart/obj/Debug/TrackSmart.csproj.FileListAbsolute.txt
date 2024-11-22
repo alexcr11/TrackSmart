@@ -13,9 +13,7 @@ C:\Users\crone\Source\Repos\alexcr11\TrackSmart\TrackSmart\bin\Debug\TrackSmart.
 C:\Users\crone\Source\Repos\alexcr11\TrackSmart\TrackSmart\bin\Debug\TrackSmart.exe
 C:\Users\crone\Source\Repos\alexcr11\TrackSmart\TrackSmart\bin\Debug\TrackSmart.pdb
 C:\Users\crone\Source\Repos\alexcr11\TrackSmart\TrackSmart\obj\Debug\TrackSmart.csproj.AssemblyReference.cache
-C:\Users\crone\Source\Repos\alexcr11\TrackSmart\TrackSmart\obj\Debug\TrackSmart.Form1.resources
 C:\Users\crone\Source\Repos\alexcr11\TrackSmart\TrackSmart\obj\Debug\TrackSmart.Properties.Resources.resources
-C:\Users\crone\Source\Repos\alexcr11\TrackSmart\TrackSmart\obj\Debug\TrackSmart.settingsForm.resources
 C:\Users\crone\Source\Repos\alexcr11\TrackSmart\TrackSmart\obj\Debug\TrackSmart.csproj.GenerateResource.cache
 C:\Users\crone\Source\Repos\alexcr11\TrackSmart\TrackSmart\obj\Debug\TrackSmart.csproj.CoreCompileInputs.cache
 C:\Users\crone\Source\Repos\alexcr11\TrackSmart\TrackSmart\obj\Debug\TrackSmart.exe
@@ -30,3 +28,6 @@ C:\Users\crone\source\repos\alexcr11\TrackSmart\TrackSmart\bin\Debug\EntityFrame
 C:\Users\crone\source\repos\alexcr11\TrackSmart\TrackSmart\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\crone\source\repos\alexcr11\TrackSmart\TrackSmart\bin\Debug\System.Data.SQLite.xml
 C:\Users\crone\source\repos\alexcr11\TrackSmart\TrackSmart\obj\Debug\TrackSmart.csproj.Up2Date
+C:\Users\crone\source\repos\alexcr11\TrackSmart\TrackSmart\obj\Debug\TrackSmart.TrackSmart.resources
+C:\Users\crone\source\repos\alexcr11\TrackSmart\TrackSmart\obj\Debug\TrackSmart.Settings.resources
+C:\Users\crone\source\repos\alexcr11\TrackSmart\TrackSmart\obj\Debug\TrackSmart.ExpenseViewer.resources

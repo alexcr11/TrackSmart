@@ -1,6 +1,6 @@
 ﻿namespace TrackSmart
 {
-    partial class Form1
+    partial class TrackSmart
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrackSmart));
             this.category = new System.Windows.Forms.ComboBox();
             this.vendor = new System.Windows.Forms.ComboBox();
             this.amount = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@
             this.finishButton = new System.Windows.Forms.Button();
             this.btnDeleteExpense = new System.Windows.Forms.Button();
             this.listViewExpenses = new System.Windows.Forms.ListView();
-            this.label5 = new System.Windows.Forms.Label();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnEditSelected = new System.Windows.Forms.Button();
             this.btnYTD = new System.Windows.Forms.Button();
@@ -68,7 +68,7 @@
             "Renters Insurance-Home",
             "Auto Insurance-Home",
             "License/Tags"});
-            this.category.Location = new System.Drawing.Point(234, 67);
+            this.category.Location = new System.Drawing.Point(138, 61);
             this.category.Margin = new System.Windows.Forms.Padding(2);
             this.category.Name = "category";
             this.category.Size = new System.Drawing.Size(187, 21);
@@ -91,7 +91,7 @@
             "Best Buy",
             "Staples",
             "Hobby Lobby"});
-            this.vendor.Location = new System.Drawing.Point(234, 138);
+            this.vendor.Location = new System.Drawing.Point(138, 131);
             this.vendor.Margin = new System.Windows.Forms.Padding(2);
             this.vendor.Name = "vendor";
             this.vendor.Size = new System.Drawing.Size(187, 21);
@@ -99,7 +99,7 @@
             // 
             // amount
             // 
-            this.amount.Location = new System.Drawing.Point(234, 172);
+            this.amount.Location = new System.Drawing.Point(138, 166);
             this.amount.Margin = new System.Windows.Forms.Padding(2);
             this.amount.Name = "amount";
             this.amount.Size = new System.Drawing.Size(187, 20);
@@ -108,42 +108,46 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(86, 173);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label1.Location = new System.Drawing.Point(55, 167);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 21);
+            this.label1.Size = new System.Drawing.Size(75, 19);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Dollar amount";
+            this.label1.Text = "Amount:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Yu Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(89, 103);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label2.Location = new System.Drawing.Point(81, 95);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 21);
+            this.label2.Size = new System.Drawing.Size(49, 19);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Expense Date";
+            this.label2.Text = "Date:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Yu Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(71, 138);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label3.Location = new System.Drawing.Point(61, 130);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 21);
+            this.label3.Size = new System.Drawing.Size(69, 19);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Expense Vendor";
+            this.label3.Text = "Vendor:";
             // 
             // date
             // 
             this.date.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.date.Location = new System.Drawing.Point(234, 102);
+            this.date.Location = new System.Drawing.Point(138, 95);
             this.date.Margin = new System.Windows.Forms.Padding(2);
             this.date.Name = "date";
             this.date.Size = new System.Drawing.Size(187, 20);
@@ -152,19 +156,21 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Yu Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(57, 67);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label4.Location = new System.Drawing.Point(48, 61);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(149, 21);
+            this.label4.Size = new System.Drawing.Size(82, 19);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Expense Category";
+            this.label4.Text = "Category:";
             // 
             // finishButton
             // 
             this.finishButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.finishButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.finishButton.Location = new System.Drawing.Point(463, 58);
+            this.finishButton.Location = new System.Drawing.Point(338, 51);
             this.finishButton.Margin = new System.Windows.Forms.Padding(2);
             this.finishButton.Name = "finishButton";
             this.finishButton.Size = new System.Drawing.Size(161, 30);
@@ -177,7 +183,7 @@
             // 
             this.btnDeleteExpense.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteExpense.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnDeleteExpense.Location = new System.Drawing.Point(637, 96);
+            this.btnDeleteExpense.Location = new System.Drawing.Point(512, 89);
             this.btnDeleteExpense.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteExpense.Name = "btnDeleteExpense";
             this.btnDeleteExpense.Size = new System.Drawing.Size(161, 30);
@@ -190,30 +196,19 @@
             // 
             this.listViewExpenses.BackColor = System.Drawing.SystemColors.ControlLight;
             this.listViewExpenses.HideSelection = false;
-            this.listViewExpenses.Location = new System.Drawing.Point(193, 255);
+            this.listViewExpenses.Location = new System.Drawing.Point(97, 244);
             this.listViewExpenses.Margin = new System.Windows.Forms.Padding(2);
             this.listViewExpenses.Name = "listViewExpenses";
-            this.listViewExpenses.Size = new System.Drawing.Size(504, 239);
+            this.listViewExpenses.Size = new System.Drawing.Size(520, 249);
             this.listViewExpenses.TabIndex = 12;
             this.listViewExpenses.UseCompatibleStateImageBehavior = false;
             this.listViewExpenses.View = System.Windows.Forms.View.Details;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(210, 172);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(20, 21);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "$";
             // 
             // btnSettings
             // 
             this.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSettings.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSettings.Location = new System.Drawing.Point(463, 96);
+            this.btnSettings.Location = new System.Drawing.Point(338, 89);
             this.btnSettings.Margin = new System.Windows.Forms.Padding(2);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(161, 30);
@@ -226,7 +221,7 @@
             // 
             this.btnEditSelected.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditSelected.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnEditSelected.Location = new System.Drawing.Point(637, 58);
+            this.btnEditSelected.Location = new System.Drawing.Point(512, 51);
             this.btnEditSelected.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditSelected.Name = "btnEditSelected";
             this.btnEditSelected.Size = new System.Drawing.Size(161, 30);
@@ -239,7 +234,7 @@
             // 
             this.btnYTD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYTD.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnYTD.Location = new System.Drawing.Point(463, 169);
+            this.btnYTD.Location = new System.Drawing.Point(338, 162);
             this.btnYTD.Margin = new System.Windows.Forms.Padding(2);
             this.btnYTD.Name = "btnYTD";
             this.btnYTD.Size = new System.Drawing.Size(335, 30);
@@ -252,7 +247,7 @@
             // 
             this.btnMTD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMTD.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMTD.Location = new System.Drawing.Point(463, 132);
+            this.btnMTD.Location = new System.Drawing.Point(338, 125);
             this.btnMTD.Margin = new System.Windows.Forms.Padding(2);
             this.btnMTD.Name = "btnMTD";
             this.btnMTD.Size = new System.Drawing.Size(335, 30);
@@ -264,39 +259,39 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(360, 16);
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label6.Location = new System.Drawing.Point(286, 9);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 32);
+            this.label6.Size = new System.Drawing.Size(151, 31);
             this.label6.TabIndex = 20;
             this.label6.Text = "TrackSmart";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(360, 211);
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label7.Location = new System.Drawing.Point(277, 206);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(159, 32);
+            this.label7.Size = new System.Drawing.Size(153, 28);
             this.label7.TabIndex = 21;
             this.label7.Text = "Expense Logs";
             // 
-            // Form1
+            // TrackSmart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(869, 505);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(702, 498);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnMTD);
             this.Controls.Add(this.btnYTD);
             this.Controls.Add(this.btnEditSelected);
             this.Controls.Add(this.btnSettings);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.listViewExpenses);
             this.Controls.Add(this.btnDeleteExpense);
             this.Controls.Add(this.finishButton);
@@ -310,11 +305,13 @@
             this.Controls.Add(this.category);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(999, 999);
-            this.Name = "Form1";
+            this.Name = "TrackSmart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "TrackSmart";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,7 +329,6 @@
         private System.Windows.Forms.Button finishButton;
         private System.Windows.Forms.Button btnDeleteExpense;
         private System.Windows.Forms.ListView listViewExpenses;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnEditSelected;
         private System.Windows.Forms.Button btnYTD;
