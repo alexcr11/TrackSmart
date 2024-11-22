@@ -6,11 +6,12 @@ using TrackSmart;
 
 public class DatabaseHelper
 {
-    private string dbFilePath = "expenses.db"; // This points to the database file in the project directory.
+    // Store the database file in the AppData directory for persistence
+    private string dbFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "expenses.db");
 
     public void InitializeDatabase()
     {
-        // Check if the database file exists in the output directory
+        // Check if the database file exists in the AppData folder
         if (!File.Exists(dbFilePath))
         {
             SQLiteConnection.CreateFile(dbFilePath);
