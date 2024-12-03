@@ -180,7 +180,7 @@ namespace TrackSmart
             listViewExpenses.Columns.Clear();
 
             // Add columns for Id, Date, Vendor, Category, and Amount
-            listViewExpenses.Columns.Add("Id", 50, HorizontalAlignment.Left);  // New Id column
+            listViewExpenses.Columns.Add("Id", 50, HorizontalAlignment.Left);  
             listViewExpenses.Columns.Add("Date", 100, HorizontalAlignment.Left);
             listViewExpenses.Columns.Add("Category", 100, HorizontalAlignment.Left);
             listViewExpenses.Columns.Add("Vendor", 150, HorizontalAlignment.Left);
