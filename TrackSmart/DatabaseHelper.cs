@@ -194,11 +194,11 @@ public class DatabaseHelper
                     Expense expense = new Expense(
                         reader.GetInt32(0), // Id
                         DateTime.Parse(reader.GetString(1)), // Date
-                        reader.GetString(2), // Category
                         reader.GetString(3), // Vendor
+                        reader.GetString(2), // Category
                         reader.GetDecimal(4)  // Amount
+                        
                     );
-
                     expenses.Add(expense);
                 }
             }

@@ -7,7 +7,6 @@ namespace TrackSmart
 {
     public partial class TrackSmart : Form
     {
-        List<Expense> expenseList = new List<Expense>();
         private int editingIndex = -1;
         private DatabaseHelper dbHelper;
 
@@ -114,8 +113,8 @@ namespace TrackSmart
             if (!ValidateExpenseFields()) return;
 
             DateTime selectedDate = date.Value;
-            string selectedVendor = vendor.SelectedItem?.ToString();
             string selectedCategory = category.SelectedItem?.ToString();
+            string selectedVendor = vendor.SelectedItem?.ToString();
             decimal amountSpent = decimal.Parse(amount.Text);
 
             if (editingIndex >= 0)
@@ -131,7 +130,7 @@ namespace TrackSmart
                 // Add the expense to the database
                 dbHelper.AddExpense(selectedDate, selectedCategory, selectedVendor, amountSpent);
             }
-
+        
             // Refresh the ListView by retrieving all expenses from the database
             DisplayExpenses();
 
@@ -139,8 +138,6 @@ namespace TrackSmart
             expenseAddConfirmation();
             ClearForm();
         }
-
-
 
         private void expenseAddConfirmation()
         {
@@ -163,10 +160,10 @@ namespace TrackSmart
 
                 // Add subitems for Date, Vendor, Category, and Amount
                 item.SubItems.Add(expense.Date.ToString("MM/dd/yyyy"));
-                item.SubItems.Add(expense.Vendor);
                 item.SubItems.Add(expense.Category);
+                item.SubItems.Add(expense.Vendor);
                 item.SubItems.Add(expense.Amount.ToString("C")); // "C" formats as currency
-
+                
                 // Add the ListViewItem to the ListView
                 listViewExpenses.Items.Add(item);
             }
@@ -234,15 +231,6 @@ namespace TrackSmart
             LoadVendors();    // Reload vendors into the ComboBox
         }
 
-        private void DisplayNewExpense(Expense expense)
-        {
-            ListViewItem item = new ListViewItem(expense.Date.ToString("MM/dd/yyyy"));
-            item.SubItems.Add(expense.Vendor);
-            item.SubItems.Add(expense.Category);
-            item.SubItems.Add(expense.Amount.ToString("C"));
-            listViewExpenses.Items.Add(item);
-        }
-
         private void btnEditSelected_Click(object sender, EventArgs e)
         {
             // Check if an item is selected
@@ -304,18 +292,12 @@ namespace TrackSmart
             settingsForm.ShowDialog();  
         }
 
-        private void btnYTD_Click(object sender, EventArgs e)
+        private void btnViewExpenses_Click(object sender, EventArgs e)
         {
-            //this code should send the expense list YTD data to the new form to prefill the details needed in the form
-            ExpenseViewer expenseViewer = new ExpenseViewer();
-            expenseViewer.Owner = this;
-            expenseViewer.ShowDialog();
-        }
+            List<Expense> expenses = dbHelper.GetExpenses(); // Get list of expenses
 
-        private void btnMTD_Click(object sender, EventArgs e)
-        {
-            //this code should send the expense list data to the new form to prefill the details needed in the form
-            ExpenseViewer expenseViewer = new ExpenseViewer();
+            //this code should send the expense list YTD data to the new form to prefill the details needed in the form
+            ExpenseViewer expenseViewer = new ExpenseViewer(expenses);
             expenseViewer.Owner = this;
             expenseViewer.ShowDialog();
         }

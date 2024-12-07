@@ -42,10 +42,9 @@
             this.listViewExpenses = new System.Windows.Forms.ListView();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnEditSelected = new System.Windows.Forms.Button();
-            this.btnYTD = new System.Windows.Forms.Button();
-            this.btnMTD = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnViewExpenses = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // category
@@ -68,7 +67,7 @@
             "Renters Insurance-Home",
             "Auto Insurance-Home",
             "License/Tags"});
-            this.category.Location = new System.Drawing.Point(138, 61);
+            this.category.Location = new System.Drawing.Point(138, 62);
             this.category.Margin = new System.Windows.Forms.Padding(2);
             this.category.Name = "category";
             this.category.Size = new System.Drawing.Size(187, 21);
@@ -99,7 +98,7 @@
             // 
             // amount
             // 
-            this.amount.Location = new System.Drawing.Point(138, 166);
+            this.amount.Location = new System.Drawing.Point(138, 160);
             this.amount.Margin = new System.Windows.Forms.Padding(2);
             this.amount.Name = "amount";
             this.amount.Size = new System.Drawing.Size(187, 20);
@@ -111,7 +110,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(55, 167);
+            this.label1.Location = new System.Drawing.Point(55, 160);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 19);
@@ -170,7 +169,7 @@
             // 
             this.finishButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.finishButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.finishButton.Location = new System.Drawing.Point(338, 51);
+            this.finishButton.Location = new System.Drawing.Point(338, 61);
             this.finishButton.Margin = new System.Windows.Forms.Padding(2);
             this.finishButton.Name = "finishButton";
             this.finishButton.Size = new System.Drawing.Size(161, 30);
@@ -183,7 +182,7 @@
             // 
             this.btnDeleteExpense.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteExpense.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnDeleteExpense.Location = new System.Drawing.Point(512, 89);
+            this.btnDeleteExpense.Location = new System.Drawing.Point(512, 104);
             this.btnDeleteExpense.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteExpense.Name = "btnDeleteExpense";
             this.btnDeleteExpense.Size = new System.Drawing.Size(161, 30);
@@ -196,7 +195,7 @@
             // 
             this.listViewExpenses.BackColor = System.Drawing.SystemColors.ControlLight;
             this.listViewExpenses.HideSelection = false;
-            this.listViewExpenses.Location = new System.Drawing.Point(97, 244);
+            this.listViewExpenses.Location = new System.Drawing.Point(104, 229);
             this.listViewExpenses.Margin = new System.Windows.Forms.Padding(2);
             this.listViewExpenses.Name = "listViewExpenses";
             this.listViewExpenses.Size = new System.Drawing.Size(520, 249);
@@ -208,7 +207,7 @@
             // 
             this.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSettings.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSettings.Location = new System.Drawing.Point(338, 89);
+            this.btnSettings.Location = new System.Drawing.Point(338, 104);
             this.btnSettings.Margin = new System.Windows.Forms.Padding(2);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(161, 30);
@@ -221,7 +220,7 @@
             // 
             this.btnEditSelected.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditSelected.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnEditSelected.Location = new System.Drawing.Point(512, 51);
+            this.btnEditSelected.Location = new System.Drawing.Point(512, 61);
             this.btnEditSelected.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditSelected.Name = "btnEditSelected";
             this.btnEditSelected.Size = new System.Drawing.Size(161, 30);
@@ -229,32 +228,6 @@
             this.btnEditSelected.Text = "Edit Selected";
             this.btnEditSelected.UseVisualStyleBackColor = true;
             this.btnEditSelected.Click += new System.EventHandler(this.btnEditSelected_Click);
-            // 
-            // btnYTD
-            // 
-            this.btnYTD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnYTD.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnYTD.Location = new System.Drawing.Point(338, 162);
-            this.btnYTD.Margin = new System.Windows.Forms.Padding(2);
-            this.btnYTD.Name = "btnYTD";
-            this.btnYTD.Size = new System.Drawing.Size(335, 30);
-            this.btnYTD.TabIndex = 18;
-            this.btnYTD.Text = "View YTD Expenses";
-            this.btnYTD.UseVisualStyleBackColor = true;
-            this.btnYTD.Click += new System.EventHandler(this.btnYTD_Click);
-            // 
-            // btnMTD
-            // 
-            this.btnMTD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMTD.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMTD.Location = new System.Drawing.Point(338, 125);
-            this.btnMTD.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMTD.Name = "btnMTD";
-            this.btnMTD.Size = new System.Drawing.Size(335, 30);
-            this.btnMTD.TabIndex = 19;
-            this.btnMTD.Text = "View MTD Expenses";
-            this.btnMTD.UseVisualStyleBackColor = true;
-            this.btnMTD.Click += new System.EventHandler(this.btnMTD_Click);
             // 
             // label6
             // 
@@ -273,12 +246,25 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label7.Location = new System.Drawing.Point(277, 206);
+            this.label7.Location = new System.Drawing.Point(284, 191);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(153, 28);
             this.label7.TabIndex = 21;
             this.label7.Text = "Expense Logs";
+            // 
+            // btnViewExpenses
+            // 
+            this.btnViewExpenses.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnViewExpenses.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnViewExpenses.Location = new System.Drawing.Point(338, 147);
+            this.btnViewExpenses.Margin = new System.Windows.Forms.Padding(2);
+            this.btnViewExpenses.Name = "btnViewExpenses";
+            this.btnViewExpenses.Size = new System.Drawing.Size(335, 33);
+            this.btnViewExpenses.TabIndex = 22;
+            this.btnViewExpenses.Text = " View Expenses";
+            this.btnViewExpenses.UseVisualStyleBackColor = true;
+            this.btnViewExpenses.Click += new System.EventHandler(this.btnViewExpenses_Click);
             // 
             // TrackSmart
             // 
@@ -286,10 +272,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(702, 498);
+            this.Controls.Add(this.btnViewExpenses);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.btnMTD);
-            this.Controls.Add(this.btnYTD);
             this.Controls.Add(this.btnEditSelected);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.listViewExpenses);
@@ -331,10 +316,9 @@
         private System.Windows.Forms.ListView listViewExpenses;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnEditSelected;
-        private System.Windows.Forms.Button btnYTD;
-        private System.Windows.Forms.Button btnMTD;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnViewExpenses;
     }
 }
 
