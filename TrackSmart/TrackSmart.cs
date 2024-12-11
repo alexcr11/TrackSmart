@@ -31,15 +31,49 @@ namespace TrackSmart
         private void LoadCategories()
         {
             List<string> categories = dbHelper.GetCategories();
-            category.Items.Clear();
-            category.Items.AddRange(categories.ToArray());
+
+            // Check if no categories exist
+            if (categories == null || categories.Count == 0) 
+            {
+                category.Items.Clear();
+                category.Items.Add("No categories available (Go to Settings first)");
+                category.SelectedIndex = 0;
+
+                // Disable the dropdown
+                category.Enabled = false;  
+            }
+            else
+            {
+                category.Items.Clear();
+                category.Items.AddRange(categories.ToArray()); 
+
+                // Enable the dropdown
+                category.Enabled = true; 
+            }
         }
 
         private void LoadVendors()
         {
             List<string> vendors = dbHelper.GetVendors();
-            vendor.Items.Clear();
-            vendor.Items.AddRange(vendors.ToArray());
+
+            // Check if no vendors exist
+            if (vendor == null || vendors.Count == 0) 
+            {
+                vendor.Items.Clear();
+                vendor.Items.Add("No Vendors available (Go to Settings first)");
+                vendor.SelectedIndex = 0; 
+
+                // Disable the dropdown
+                vendor.Enabled = false;  
+            }
+            else
+            {
+                vendor.Items.Clear();
+                vendor.Items.AddRange(vendors.ToArray());
+                
+                // Enable the dropdown
+                vendor.Enabled = true; 
+            }
         }
 
         private int sortColumn = -1;
@@ -256,6 +290,8 @@ namespace TrackSmart
                         // Track the Id for saving edits later
                         editingIndex = selectedExpense.Id;
                     }
+
+                    MessageBox.Show("The Expense you have selected to edit has been moved to the create expense section, where you'll be able to change the values for the expense. After you are satisfied with your adjustments press the add expense button to confirm your changes.", "Edit Reminder", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else

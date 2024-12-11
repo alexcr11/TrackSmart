@@ -9,15 +9,60 @@ namespace TrackSmart
         private void LoadCategories()
         {
             List<string> categories = dbHelper.GetCategories();
-            category.Items.Clear();
-            category.Items.AddRange(categories.ToArray());
+
+            // Check if no categories exist
+            if (categories == null || categories.Count == 0)
+            {
+                category.Items.Clear();
+                category.Items.Add("There are no Categories");
+                category.SelectedIndex = 0;
+
+                // Disable the dropdown
+                category.Enabled = false;  
+                // Disable the Remove button 
+                RemoveExpenseCategoryButton.Enabled = false;
+            }
+            else
+            {
+                category.Items.Clear();
+                category.Items.AddRange(categories.ToArray()); 
+
+                // Enable the dropdown
+                category.Enabled = true;
+
+                // Enable the Remove button
+                RemoveExpenseCategoryButton.Enabled= true;
+            }
         }
 
         private void LoadVendors()
         {
             List<string> vendors = dbHelper.GetVendors();
-            vendor.Items.Clear();
-            vendor.Items.AddRange(vendors.ToArray());
+
+            // Check if no vendors exist
+            if (vendors == null || vendors.Count == 0) 
+            {
+                vendor.Items.Clear();
+                vendor.Items.Add("There are no Vendors.");
+                vendor.SelectedIndex = 0;
+
+                // Disable the dropdown
+                vendor.Enabled = false;  
+
+                // Disable the Remove button 
+                RemoveExpenseVendorButton.Enabled= false;
+            }
+            else
+            {
+                vendor.Items.Clear();
+                vendor.Items.AddRange(vendors.ToArray());
+
+                // Enable the dropdown
+                vendor.Enabled = true; 
+
+                // Enable the Remove button
+                RemoveExpenseVendorButton.Enabled= true;
+            }
         }
 
         private DatabaseHelper dbHelper;

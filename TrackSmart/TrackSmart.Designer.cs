@@ -52,25 +52,10 @@
             this.category.Cursor = System.Windows.Forms.Cursors.Hand;
             this.category.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.category.FormattingEnabled = true;
-            this.category.Items.AddRange(new object[] {
-            "Gas",
-            "Vehicle Maintenance",
-            "Office Supplies",
-            "Training /Certifications",
-            "Food Receipts-Self",
-            "Food Receipts-Client",
-            "Outings",
-            "Internet",
-            "Cell Phone",
-            "Electric-Home",
-            "Gas-Home",
-            "Renters Insurance-Home",
-            "Auto Insurance-Home",
-            "License/Tags"});
-            this.category.Location = new System.Drawing.Point(138, 62);
+            this.category.Location = new System.Drawing.Point(130, 62);
             this.category.Margin = new System.Windows.Forms.Padding(2);
             this.category.Name = "category";
-            this.category.Size = new System.Drawing.Size(187, 21);
+            this.category.Size = new System.Drawing.Size(247, 21);
             this.category.TabIndex = 2;
             // 
             // vendor
@@ -78,30 +63,18 @@
             this.vendor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.vendor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.vendor.FormattingEnabled = true;
-            this.vendor.Items.AddRange(new object[] {
-            "Get Go Gas",
-            "Meijers Gas",
-            "Speedway",
-            "BP Gas",
-            "Walmart",
-            "Amazon",
-            "Target",
-            "Tractor Supply",
-            "Best Buy",
-            "Staples",
-            "Hobby Lobby"});
-            this.vendor.Location = new System.Drawing.Point(138, 131);
+            this.vendor.Location = new System.Drawing.Point(130, 131);
             this.vendor.Margin = new System.Windows.Forms.Padding(2);
             this.vendor.Name = "vendor";
-            this.vendor.Size = new System.Drawing.Size(187, 21);
+            this.vendor.Size = new System.Drawing.Size(247, 21);
             this.vendor.TabIndex = 3;
             // 
             // amount
             // 
-            this.amount.Location = new System.Drawing.Point(138, 160);
+            this.amount.Location = new System.Drawing.Point(130, 161);
             this.amount.Margin = new System.Windows.Forms.Padding(2);
             this.amount.Name = "amount";
-            this.amount.Size = new System.Drawing.Size(187, 20);
+            this.amount.Size = new System.Drawing.Size(247, 20);
             this.amount.TabIndex = 4;
             // 
             // label1
@@ -110,7 +83,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(55, 160);
+            this.label1.Location = new System.Drawing.Point(42, 160);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 19);
@@ -123,7 +96,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(81, 95);
+            this.label2.Location = new System.Drawing.Point(62, 95);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 19);
@@ -136,7 +109,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(61, 130);
+            this.label3.Location = new System.Drawing.Point(42, 130);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 19);
@@ -146,10 +119,10 @@
             // date
             // 
             this.date.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.date.Location = new System.Drawing.Point(138, 95);
+            this.date.Location = new System.Drawing.Point(130, 95);
             this.date.Margin = new System.Windows.Forms.Padding(2);
             this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(187, 20);
+            this.date.Size = new System.Drawing.Size(247, 20);
             this.date.TabIndex = 8;
             // 
             // label4
@@ -158,7 +131,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(48, 61);
+            this.label4.Location = new System.Drawing.Point(29, 61);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 19);
@@ -169,10 +142,10 @@
             // 
             this.finishButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.finishButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.finishButton.Location = new System.Drawing.Point(338, 61);
+            this.finishButton.Location = new System.Drawing.Point(381, 61);
             this.finishButton.Margin = new System.Windows.Forms.Padding(2);
             this.finishButton.Name = "finishButton";
-            this.finishButton.Size = new System.Drawing.Size(161, 30);
+            this.finishButton.Size = new System.Drawing.Size(107, 30);
             this.finishButton.TabIndex = 10;
             this.finishButton.Text = "Add expense";
             this.finishButton.UseVisualStyleBackColor = true;
@@ -182,10 +155,10 @@
             // 
             this.btnDeleteExpense.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteExpense.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnDeleteExpense.Location = new System.Drawing.Point(512, 104);
+            this.btnDeleteExpense.Location = new System.Drawing.Point(492, 104);
             this.btnDeleteExpense.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteExpense.Name = "btnDeleteExpense";
-            this.btnDeleteExpense.Size = new System.Drawing.Size(161, 30);
+            this.btnDeleteExpense.Size = new System.Drawing.Size(124, 30);
             this.btnDeleteExpense.TabIndex = 11;
             this.btnDeleteExpense.Text = "Delete selected";
             this.btnDeleteExpense.UseVisualStyleBackColor = true;
@@ -195,7 +168,7 @@
             // 
             this.listViewExpenses.BackColor = System.Drawing.SystemColors.ControlLight;
             this.listViewExpenses.HideSelection = false;
-            this.listViewExpenses.Location = new System.Drawing.Point(104, 229);
+            this.listViewExpenses.Location = new System.Drawing.Point(66, 238);
             this.listViewExpenses.Margin = new System.Windows.Forms.Padding(2);
             this.listViewExpenses.Name = "listViewExpenses";
             this.listViewExpenses.Size = new System.Drawing.Size(520, 249);
@@ -207,10 +180,10 @@
             // 
             this.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSettings.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSettings.Location = new System.Drawing.Point(338, 104);
+            this.btnSettings.Location = new System.Drawing.Point(381, 104);
             this.btnSettings.Margin = new System.Windows.Forms.Padding(2);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(161, 30);
+            this.btnSettings.Size = new System.Drawing.Size(107, 30);
             this.btnSettings.TabIndex = 16;
             this.btnSettings.Text = "Settings";
             this.btnSettings.UseVisualStyleBackColor = true;
@@ -220,10 +193,10 @@
             // 
             this.btnEditSelected.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditSelected.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnEditSelected.Location = new System.Drawing.Point(512, 61);
+            this.btnEditSelected.Location = new System.Drawing.Point(492, 61);
             this.btnEditSelected.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditSelected.Name = "btnEditSelected";
-            this.btnEditSelected.Size = new System.Drawing.Size(161, 30);
+            this.btnEditSelected.Size = new System.Drawing.Size(124, 30);
             this.btnEditSelected.TabIndex = 17;
             this.btnEditSelected.Text = "Edit Selected";
             this.btnEditSelected.UseVisualStyleBackColor = true;
@@ -234,7 +207,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label6.Location = new System.Drawing.Point(286, 9);
+            this.label6.Location = new System.Drawing.Point(256, 9);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(151, 31);
@@ -246,7 +219,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label7.Location = new System.Drawing.Point(284, 191);
+            this.label7.Location = new System.Drawing.Point(254, 195);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(153, 28);
@@ -257,10 +230,10 @@
             // 
             this.btnViewExpenses.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnViewExpenses.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnViewExpenses.Location = new System.Drawing.Point(338, 147);
+            this.btnViewExpenses.Location = new System.Drawing.Point(381, 147);
             this.btnViewExpenses.Margin = new System.Windows.Forms.Padding(2);
             this.btnViewExpenses.Name = "btnViewExpenses";
-            this.btnViewExpenses.Size = new System.Drawing.Size(335, 33);
+            this.btnViewExpenses.Size = new System.Drawing.Size(235, 33);
             this.btnViewExpenses.TabIndex = 22;
             this.btnViewExpenses.Text = " View Expenses";
             this.btnViewExpenses.UseVisualStyleBackColor = true;
@@ -271,7 +244,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(702, 498);
+            this.ClientSize = new System.Drawing.Size(656, 498);
             this.Controls.Add(this.btnViewExpenses);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
