@@ -109,7 +109,6 @@
             this.category.Name = "category";
             this.category.Size = new System.Drawing.Size(179, 21);
             this.category.TabIndex = 12;
-            this.category.SelectedIndexChanged += new System.EventHandler(this.category_SelectedIndexChanged);
             // 
             // vendor
             // 

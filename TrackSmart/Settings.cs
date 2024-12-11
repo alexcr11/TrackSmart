@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TrackSmart
@@ -26,7 +20,7 @@ namespace TrackSmart
             vendor.Items.AddRange(vendors.ToArray());
         }
 
-        private DatabaseHelper dbHelper; // Declare dbHelper at the class level
+        private DatabaseHelper dbHelper;
 
         public Settings()
         {
@@ -114,16 +108,6 @@ namespace TrackSmart
             {
                 MessageBox.Show("Please select a Vendor to delete.");
             }
-        }
-
-        private void category_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AddExpenseVendorButton_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

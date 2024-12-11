@@ -58,7 +58,7 @@ public class DatabaseHelper
         using (var connection = new SQLiteConnection($"Data Source={dbFilePath};Version=3;"))
         {
             connection.Open();
-            string insertQuery = "INSERT INTO Vendors (Name) VALUES (@Name)"; // Adjust table/column names if needed
+            string insertQuery = "INSERT INTO Vendors (Name) VALUES (@Name)";
 
             using (var command = new SQLiteCommand(insertQuery, connection))
             {
@@ -95,7 +95,7 @@ public class DatabaseHelper
         using (var connection = new SQLiteConnection($"Data Source={dbFilePath};Version=3;"))
         {
             connection.Open();
-            string insertQuery = "INSERT INTO Categories (Name) VALUES (@Name)"; // Adjust table/column names if needed
+            string insertQuery = "INSERT INTO Categories (Name) VALUES (@Name)";
 
             using (var command = new SQLiteCommand(insertQuery, connection))
             {

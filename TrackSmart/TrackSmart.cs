@@ -46,24 +46,24 @@ namespace TrackSmart
 
         private void listViewExpenses_ColumnClick(object sender, ColumnClickEventArgs e)
         {
-            // Determine if the clicked column is the same as the previously clicked column.
+            // Determine if the clicked column is the same as the previously clicked column
             if (e.Column != sortColumn)
             {
-                // Set the new sort column.
+                // Set the new sort column
                 sortColumn = e.Column;
-                // Set the sort order to ascending by default.
+                // Set the sort order to ascending by default
                 listViewExpenses.Sorting = SortOrder.Ascending;
             }
             else
             {
-                // Toggle the sort order.
+                // Toggle the sort order
                 listViewExpenses.Sorting = listViewExpenses.Sorting == SortOrder.Ascending ? SortOrder.Descending : SortOrder.Ascending;
             }
 
             // Set the ListViewItemSorter property to a new ListViewItemComparer object.
             listViewExpenses.ListViewItemSorter = new ListViewItemComparer(e.Column, listViewExpenses.Sorting);
 
-            // Call the sort method to manually sort.
+            // Call the sort method to manually sort
             listViewExpenses.Sort();
         }
 
@@ -83,7 +83,7 @@ namespace TrackSmart
                 int returnVal = 0;
 
                 // Parse date or numeric values when necessary
-                if (col == 0) // Assuming the first column is the Id (numeric)
+                if (col == 0) 
                 {
                     returnVal = int.Parse(((ListViewItem)x).SubItems[col].Text).CompareTo(
                                 int.Parse(((ListViewItem)y).SubItems[col].Text));
@@ -107,7 +107,7 @@ namespace TrackSmart
         }
 
 
-        // Add a new expense when the "Finish" button is clicked
+        // Add a new expense when the Finish button is clicked
         private void finishButton_Click(object sender, EventArgs e)
         {
             if (!ValidateExpenseFields()) return;
@@ -162,13 +162,12 @@ namespace TrackSmart
                 item.SubItems.Add(expense.Date.ToString("MM/dd/yyyy"));
                 item.SubItems.Add(expense.Category);
                 item.SubItems.Add(expense.Vendor);
-                item.SubItems.Add(expense.Amount.ToString("C")); // "C" formats as currency
+                item.SubItems.Add(expense.Amount.ToString("C"));
                 
                 // Add the ListViewItem to the ListView
                 listViewExpenses.Items.Add(item);
             }
         }
-
 
         // Set up the ListView with columns
         private void SetupListView()
@@ -210,7 +209,7 @@ namespace TrackSmart
                 if (result == DialogResult.Yes)
                 {
                     // Get the Id of the selected item in the ListView
-                    int selectedId = int.Parse(listViewExpenses.SelectedItems[0].SubItems[0].Text); // Assuming Id is stored as the first column
+                    int selectedId = int.Parse(listViewExpenses.SelectedItems[0].SubItems[0].Text);
 
                     // Delete the corresponding expense from the database
                     dbHelper.DeleteExpense(selectedId);
@@ -241,10 +240,10 @@ namespace TrackSmart
                 if (result == DialogResult.Yes)
                 {
                     // Get the Id of the selected item in the ListView
-                    int selectedId = int.Parse(listViewExpenses.SelectedItems[0].SubItems[0].Text); // Assuming Id is stored as the first column
+                    int selectedId = int.Parse(listViewExpenses.SelectedItems[0].SubItems[0].Text); 
 
                     // Retrieve the expense with the specified Id from the database
-                    Expense selectedExpense = dbHelper.GetExpenseById(selectedId); // You'll need to implement this method
+                    Expense selectedExpense = dbHelper.GetExpenseById(selectedId); 
 
                     if (selectedExpense != null)
                     {
@@ -294,7 +293,8 @@ namespace TrackSmart
 
         private void btnViewExpenses_Click(object sender, EventArgs e)
         {
-            List<Expense> expenses = dbHelper.GetExpenses(); // Get list of expenses
+            // Get list of expenses
+            List<Expense> expenses = dbHelper.GetExpenses();
 
             //this code should send the expense list YTD data to the new form to prefill the details needed in the form
             ExpenseViewer expenseViewer = new ExpenseViewer(expenses);

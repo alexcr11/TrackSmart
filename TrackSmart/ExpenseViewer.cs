@@ -279,8 +279,8 @@ namespace TrackSmart
                         range.Style.Border.Bottom.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
                     }
 
-                    // Save the file
-                    package.Save();  // Save the file (this will overwrite the file if it exists)
+                    // Save the file (this will overwrite the file if it exists)
+                    package.Save();
                 }
 
                 MessageBox.Show($"Excel file saved successfully to {path}");
