@@ -46,6 +46,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnUpdateChecker = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // closeButon
@@ -140,9 +141,9 @@
             this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label7.Location = new System.Drawing.Point(12, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 17);
+            this.label7.Size = new System.Drawing.Size(86, 17);
             this.label7.TabIndex = 17;
-            this.label7.Text = "Beta Version 1.0";
+            this.label7.Text = "Version 1.0.0";
             // 
             // label8
             // 
@@ -232,12 +233,23 @@
             this.label6.TabIndex = 25;
             this.label6.Text = "WARNING! anything done in this window will save automatically.";
             // 
+            // btnUpdateChecker
+            // 
+            this.btnUpdateChecker.Location = new System.Drawing.Point(283, 288);
+            this.btnUpdateChecker.Name = "btnUpdateChecker";
+            this.btnUpdateChecker.Size = new System.Drawing.Size(120, 34);
+            this.btnUpdateChecker.TabIndex = 26;
+            this.btnUpdateChecker.Text = "Check for updates";
+            this.btnUpdateChecker.UseVisualStyleBackColor = true;
+            this.btnUpdateChecker.Click += new System.EventHandler(this.btnUpdateChecker_Click);
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(541, 331);
+            this.Controls.Add(this.btnUpdateChecker);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -283,5 +295,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnUpdateChecker;
     }
 }

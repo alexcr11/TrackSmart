@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
 
 namespace TrackSmart
 {
@@ -153,6 +157,60 @@ namespace TrackSmart
             {
                 MessageBox.Show("Please select a Vendor to delete.");
             }
+        }
+        private async Task CheckForUpdatesAsync()
+        {
+            string currentVersion = "1.0.0"; // Replace with your app's version
+            string latestReleaseUrl = "https://api.github.com/repos/alexcr11/TrackSmart/releases/latest";
+
+            using (HttpClient client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("User-Agent", "TrackSmartApp"); // Required for GitHub API
+
+                try
+                {
+                    // Fetch the latest release data from GitHub
+                    string response = await client.GetStringAsync(latestReleaseUrl);
+                    var releaseData = JObject.Parse(response);
+
+                    // Parse the latest version and download URL
+                    string latestVersion = releaseData["tag_name"].ToString();
+                    string downloadUrl = releaseData["assets"][0]["browser_download_url"].ToString();
+
+                    if (latestVersion != currentVersion)
+                    {
+                        // Notify the user about the update
+                        DialogResult result = MessageBox.Show(
+                            $"A new version ({latestVersion}) is available! Would you like to download it?",
+                            "Update Available",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Information);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            // Open the download URL in the user's default browser
+                            Process.Start(new ProcessStartInfo
+                            {
+                                FileName = downloadUrl,
+                                UseShellExecute = true
+                            });
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("You are using the latest version.", "No Updates", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error checking for updates: {ex.Message}", "Update Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private async void btnUpdateChecker_Click(object sender, EventArgs e)
+        {
+            await CheckForUpdatesAsync();
         }
     }
 }
