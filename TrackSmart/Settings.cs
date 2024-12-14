@@ -171,6 +171,8 @@ namespace TrackSmart
                 {
                     // Fetch the latest release data from GitHub
                     string response = await client.GetStringAsync(latestReleaseUrl);
+                    Console.WriteLine(response); // Log the raw response
+
                     var releaseData = JObject.Parse(response);
 
                     // Parse the latest version and download URL

@@ -91,3 +91,5 @@ C:\Users\crone\source\repos\alexcr11\Personal_Programming_ProjectCrone\TrackSmar
 C:\Users\crone\source\repos\alexcr11\Personal_Programming_ProjectCrone\TrackSmart\TrackSmart\obj\Debug\TrackSmart.csproj.Up2Date
 C:\Users\crone\source\repos\alexcr11\Personal_Programming_ProjectCrone\TrackSmart\TrackSmart\obj\Debug\TrackSmart.exe
 C:\Users\crone\source\repos\alexcr11\Personal_Programming_ProjectCrone\TrackSmart\TrackSmart\obj\Debug\TrackSmart.pdb
+C:\Users\crone\source\repos\alexcr11\TrackSmart\TrackSmart\bin\Debug\Newtonsoft.Json.dll
+C:\Users\crone\source\repos\alexcr11\TrackSmart\TrackSmart\bin\Debug\Newtonsoft.Json.xml
